@@ -1,0 +1,11 @@
+*:not(form):not(:input) {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  &, .page-header & {
+   font-family: $displayFontFamily;
+   font-weight: 1000;
+  }
+}

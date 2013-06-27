@@ -1,0 +1,68 @@
+$img-path: '../img/';
+
+$baseBorderRadius:      3px;
+$borderRadiusLarge:     3px;
+$borderRadiusSmall:     3px;
+
+/* Colors */
+$white: #fff;
+$black: #0a1317;
+
+$grayLighter: #e2e2e2;
+$grayDarker: #2a2f33;
+
+$brandBlue: #2589ca;
+$darkBlue: #0e334a;
+
+$green: #04b575;
+$orange: #ff7706;
+$red: #d33231;
+
+$linkColor: $brandBlue;
+
+/* Typography */
+
+$baseFontFamily: 'runda', 'Helvetica Neue', Helvetica, sans-serif;
+$displayFontFamily: 'lft-etica', $baseFontFamily;
+
+/* Bootstrap navbar */
+$navbarCollapseWidth:             979px !default;
+$navbarCollapseDesktopWidth:      $navbarCollapseWidth + 1;
+
+$navbarHeight:                    40px;
+$navbarBackgroundHighlight:       rgba($darkBlue, .7);
+$navbarBackground:                rgba($black, .6);
+$navbarBorder:                    0;
+
+$navbarText:                      black;
+$navbarLinkColor:                 black;
+$navbarLinkColorHover:            white;
+$navbarLinkColorActive:           white;
+$navbarLinkBackgroundActive:      transparent;
+
+$navbarBrandColor:                black;
+
+/* Buttons */
+$paddingLarge: 14px 19px;
+
+$btnBackground:                     $white !default;
+$btnBackgroundHighlight:            darken($white, 10%) !default;
+$btnBorder:                         #ccc !default;
+
+$btnPrimaryBackground:              $brandBlue;
+$btnPrimaryBackgroundHighlight:     adjust-hue($btnPrimaryBackground, 8%);
+
+$btnInfoBackground:                 #5bc0de;
+$btnInfoBackgroundHighlight:        #2f96b4;
+
+$btnSuccessBackground:              $green;
+$btnSuccessBackgroundHighlight:     darken($green, 3%);
+
+$btnWarningBackground:              lighten($orange, 15%);
+$btnWarningBackgroundHighlight:     $orange;
+
+$btnDangerBackground:               #ee5f5b;
+$btnDangerBackgroundHighlight:      #bd362f;
+
+$btnInverseBackground:              #444;
+$btnInverseBackgroundHighlight:     $grayDarker;
