@@ -46,12 +46,12 @@
   }
 
   .nav > li > a {
-    & {color: $white;}
-    &:focus, &:hover {color: $brandBlue;}
+    & {color: $black;}
+    &:focus, &:hover {color: $linkColorHover;}
   }
   
   .nav > .active > a {
-    &, &:focus, &:hover {color: $brandBlue;}
+    &, &:focus, &:hover {color: $linkColorHover;}
   }
 
   /* When showing the responsive menu, all links should be white, since there likely won't be a hover option (touch) */
