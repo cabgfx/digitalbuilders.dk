@@ -205,7 +205,7 @@ a:focus {
   -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); }
 
-.img-circle {
+.img-circle, .panelist img {
   -webkit-border-radius: 500px;
   -moz-border-radius: 500px;
   border-radius: 500px; }
@@ -5946,6 +5946,37 @@ figure.alignnone {
   height: 3px !important;
   background: white !important; }
 
+.title-header {
+  margin: 20px auto 40px;
+  text-align: center; }
+  .title-header h1 {
+    max-width: 85%;
+    margin: 0 auto; }
+
+.panelist {
+  float: left;
+  width: 16.666666667%;
+  margin-bottom: 20px;
+  text-align: center; }
+  .panelist .panelist-name {
+    display: block;
+    margin: 5px auto -5px;
+    max-width: 80%;
+    line-height: 1.1em;
+    font-weight: bold; }
+  .panelist .panelist-firstname {
+    display: block;
+    color: #999999;
+    font-weight: normal; }
+  .panelist img {
+    display: block;
+    margin: 0 auto;
+    width: 60%;
+    box-sizing: border-box;
+    padding: 4px;
+    border: 1px solid #e2e2e2;
+    background: white; }
+
 .content .main {
   font-size: 16px;
   line-height: 1.6em;
@@ -5959,8 +5990,6 @@ figure.alignnone {
     font-weight: 100;
     line-height: 180%;
     color: #999999; }
-  .content .main > * {
-    margin-bottom: 20px; }
   .content .main h2, .content .main h3, .content .main h4, .content .main h5, .content .main h6 {
     margin: 0 0 20px; }
   .content .main ul {

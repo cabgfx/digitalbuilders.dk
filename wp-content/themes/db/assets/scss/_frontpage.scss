@@ -1,0 +1,38 @@
+.title-header {
+  margin: $baseLineHeight auto $baseLineHeight*2;
+  text-align: center;
+
+  h1 {max-width: 85%; margin: 0 auto; }
+}
+
+.panelist {
+  float: left;
+  width: 16.666666667%;
+  margin-bottom: $baseLineHeight;
+  text-align: center;
+
+  .panelist-name {
+    display: block;
+    margin: 5px auto -5px;
+    max-width: 80%;
+    line-height: 1.1em;
+    font-weight: bold;
+  }
+  .panelist-firstname {
+    display: block;
+    color: $grayLight;
+    font-weight: normal;
+  }
+
+  img {
+    @extend .img-circle;
+
+    display: block;
+    margin: 0 auto;
+    width: 60%;
+    box-sizing: border-box;
+    padding: 4px;
+    border: 1px solid $grayLighter;
+    background: $white;
+  }
+}
