@@ -1,4 +1,20 @@
 <?php while (have_posts()) : the_post(); ?>
+
+  <?php if (has_post_thumbnail()): ?>
+        </div>
+      </div>
+    </div>
+    
+    <div class="page-header-image">
+      <?php the_post_thumbnail('full') ?>
+    </div>
+
+    <div class="wrap container" role="document">
+      <div class="content row">
+        <div class="main <?php echo roots_main_class(); ?>" role="main">
+
+  <?php endif; ?>
+
   <article <?php post_class(); ?>>
     <header>
       <h1 class="entry-title"><?php the_title(); ?></h1>

@@ -6,6 +6,7 @@ $team = $wpdb->get_results("SELECT ID, display_name from $wpdb->users ORDER BY d
 <?php while(have_posts()): the_post(); ?>
   <header class="title-header">
     <h1><?php the_title(); ?></h1>
+    <?php the_content(); ?>
   </header>
 
   <section class="panelists clearfix">
@@ -14,9 +15,9 @@ $team = $wpdb->get_results("SELECT ID, display_name from $wpdb->users ORDER BY d
         <div class="panelist-image"><?php echo get_wp_user_avatar($person->ID, 300); ?></div>
 
         <figcaption class="panelist-name">
+          <span class="panelist-title"><?php echo $person->nickname; ?></span>
           <span class="panelist-firstname"><?php echo $person->user_firstname; ?></span>
           <?php echo $person->user_lastname; ?>
-          <span class="panelist-title"><?php echo $person->nickname; ?></span>
         </figcaption>
       </figure>
 

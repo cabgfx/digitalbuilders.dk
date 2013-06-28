@@ -1,5 +1,15 @@
 figure {margin: 0;}
 
+.page-header-image {
+  max-height: 40%;
+  overflow: hidden;
+  
+  @media (max-width: 979px) {
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+}
+
 /* ==========================================================================
    WordPress Generated Classes
    See: http://codex.wordpress.org/CSS#WordPress_Generated_Classes

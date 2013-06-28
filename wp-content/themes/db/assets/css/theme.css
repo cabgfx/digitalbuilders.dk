@@ -468,7 +468,7 @@ a:focus {
 p {
   margin: 0 0 10px; }
 
-.lead, .panelist-overlay p {
+.lead, .title-header p, .panelist-overlay p {
   margin-bottom: 20px;
   font-size: 21px;
   font-weight: 200;
@@ -5833,6 +5833,9 @@ html {
 body {
   background: #fdfbf8; }
 
+html, body {
+  height: 100%; }
+
 .site-footer {
   padding: 20px 0;
   border-top: 1px solid #999999;
@@ -5854,6 +5857,14 @@ h1, .page-header h1, h2, .page-header h2, h3, .page-header h3, h4, .page-header 
 
 figure {
   margin: 0; }
+
+.page-header-image {
+  max-height: 40%;
+  overflow: hidden; }
+  @media (max-width: 979px) {
+    .page-header-image {
+      margin-left: -20px;
+      margin-right: -20px; } }
 
 /* ==========================================================================
    WordPress Generated Classes
@@ -5965,6 +5976,14 @@ figure.alignnone {
     @media (max-width: 979px) {
       .title-header h1 {
         max-width: none; } }
+  .title-header p {
+    margin: 20px auto 0; }
+    @media (max-width: 479px) {
+      .title-header p {
+        font-size: 16px !important; } }
+    @media (min-width: 980px) {
+      .title-header p {
+        max-width: 70%; } }
 
 /* People list wrapper */
 .panelists {
@@ -6009,7 +6028,7 @@ figure.alignnone {
 
 .panelist-title {
   display: block;
-  margin-top: .4em;
+  margin: .75em auto .3em;
   font: italic 13px "leitura-news", Georgia, serif; }
   .panelist-title:before, .panelist-title:after {
     content: "\00B7";
@@ -6079,6 +6098,9 @@ figure.alignnone {
       .panelist-overlay .close {
         top: -20px;
         padding: 20px; } }
+
+.hentry {
+  margin-top: 40px; }
 
 .content .main {
   font-size: 16px;

@@ -1,6 +1,8 @@
 html {border-top: 5px solid $black;}
 body {background: desaturate(lighten(#FFF7EB, 2%), 50%);}
 
+html, body {height: 100%;}
+
 .site-footer {
   padding: $baseLineHeight 0;
   border-top: 1px solid $grayLight;
