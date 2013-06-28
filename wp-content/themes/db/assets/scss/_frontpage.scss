@@ -12,6 +12,13 @@
     font-weight: normal;
     line-height: 1.25em;
     letter-spacing: -.075em;
+
+    @media (max-width: 479px) {
+      font-size: 36px;
+    }
+    @media (max-width: 979px) {
+      max-width: none;
+    }
   }
 }
 
@@ -25,33 +32,17 @@
   width: 16.666666667%;
   margin-bottom: $baseLineHeight*1.5;
   text-align: center;
+  cursor: pointer;
 
-  .panelist-name {
-    position: relative;
-    display: block;
-    margin: 5px auto -5px;
-    line-height: 1.3em;
-    font-weight: bold;
-  }
   .panelist-firstname {
     display: block;
     color: $grayLight;
     font-weight: normal;
   }
-  .panelist-title {
-    display: block;
-    margin-top: .4em;
-    font: italic 13px $displayFontFamily;
 
-    &:before, &:after {
-      content: "\00B7";
-      margin: 0 5px;
-      color: $grayLight;
-    }
-  }
-
-  img {
+  .panelist-image img {
     @extend .img-circle;
+    @include transition(background .2s);
 
     display: block;
     margin: 0 auto;
@@ -60,5 +51,86 @@
     padding: 4px;
     border: 1px solid $grayLight;
     background: $grayLighter;
+  }
+  &:hover img {background: white;}
+}
+
+@media (max-width: 479px) {
+  .panelists {max-width: none;}
+  .panelist {
+    float: none;
+    width: 100%;
+    display: table;
+    margin: 0 0 $baseLineHeight/2;
+    padding: 0 0 $baseLineHeight/2;
+    text-align: left;
+    border-bottom: 1px solid $grayLighter;
+
+    > [class*="panelist"] {
+      display: table-cell;
+      vertical-align: middle;
+    }
+    
+    .panelist-image {width: 35%;}
+    .panelist-name {width: 65%;}
+    .panelist-image img {background: transparent; border: 0; padding: 0;}
+  }
+}
+
+.panelist-name {
+  position: relative;
+  display: block;
+  margin: 5px auto -5px;
+  line-height: 1.3em;
+  font-weight: bold;
+  font-family: $baseFontFamily;
+}
+.panelist-title {
+  display: block;
+  margin-top: .4em;
+  font: italic 13px $displayFontFamily;
+
+  &:before, &:after {
+    content: "\00B7";
+    margin: 0 5px;
+    color: $grayLight;
+  }
+}
+
+.panelist-overlay {
+  margin: 0 auto;
+  max-width: 36em;
+  text-align: center;
+  
+  img {
+    @extend .img-circle;
+    display: block;
+    margin: 0 auto;
+  }
+  
+  p {@extend .lead; text-align: justify;}
+  .panelist-firstname {display: inline;}
+  .panelist-title {margin: .5em auto 1em; font-size: 20px; }
+
+  .close {
+    @include opacity(50);
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 30px;
+    font-weight: bold;
+
+    &:hover {@include opacity(100);}
+  }
+
+  @media (max-width: 479px) {
+    img {max-width: 70%;}
+    p {margin: auto 1em;}
+
+    /* Increase the tappable area */
+    .close {
+      top: -20px;      
+      padding: 20px;
+    }
   }
 }
