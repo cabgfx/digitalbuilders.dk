@@ -486,11 +486,12 @@ em {
 cite {
   font-style: normal; }
 
-.muted, .content .main .wp-caption figcaption {
+.muted, .nav-main .nav > li > a:after, .content .main .wp-caption figcaption {
   color: #999999; }
 
-a.muted:hover,
-a.muted:focus {
+a.muted:hover, .nav-main .nav > li > a:hover:after,
+a.muted:focus,
+.nav-main .nav > li > a:focus:after {
   color: gray; }
 
 .text-warning {
@@ -5884,9 +5885,11 @@ figure.alignnone {
     -moz-box-shadow: none !important;
     box-shadow: none !important;
     background: transparent none !important; }
-
-.brand {
-  text-transform: uppercase; }
+  .navbar .brand {
+    text-transform: uppercase; }
+    @media (max-width: 979px) {
+      .navbar .brand {
+        padding-left: 5px !important; } }
 
 /* Links */
 .nav-main {
@@ -5897,9 +5900,18 @@ figure.alignnone {
     box-shadow: none !important;
     text-shadow: none !important; }
   .nav-main .nav > li > a {
-    color: #0a1317; }
+    padding-left: 0;
+    color: #0a1317;
+    text-transform: uppercase;
+    font-weight: bold; }
   .nav-main .nav > li > a:focus, .nav-main .nav > li > a:hover {
     color: #195d89; }
+  .nav-main .nav > li > a:after {
+    content: attr(title);
+    margin-left: .5em;
+    font-size: 12px;
+    text-transform: none;
+    font-weight: normal; }
   .nav-main .nav > .active > a, .nav-main .nav > .active > a:focus, .nav-main .nav > .active > a:hover {
     color: #195d89; }
   @media (min-width: 980px) {
@@ -5915,12 +5927,12 @@ figure.alignnone {
   border-bottom-color: #d33231; }
 
 /* Hamburger button, to toggle the menu on small screens */
-.btn-navbar {
+.navbar .btn-navbar {
   -webkit-box-shadow: none !important;
   -moz-box-shadow: none !important;
   box-shadow: none !important;
   background: transparent none !important;
-  padding: 0;
+  margin-right: -10px !important;
   border: 0; }
 
 .navbar .btn-navbar .icon-bar {
