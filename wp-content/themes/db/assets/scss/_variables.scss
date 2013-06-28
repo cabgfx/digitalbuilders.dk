@@ -15,7 +15,7 @@ $brandBlue: #2589ca;
 $darkBlue: #0e334a;
 
 $green: #04b575;
-$orange: #ff7706;
+$orange: #f90;
 $red: #d33231;
 
 $linkColor: $brandBlue;
@@ -28,6 +28,9 @@ $displayFontFamily: 'leitura-news', Georgia, serif;
 /* Bootstrap navbar */
 $navbarCollapseWidth:             979px !default;
 $navbarCollapseDesktopWidth:      $navbarCollapseWidth + 1;
+
+$navbarHeight:                    60px;
+$navbarBrandColor:                $black;
 
 $navbarBackgroundHighlight:       $white;
 $navbarBackground:                $white;

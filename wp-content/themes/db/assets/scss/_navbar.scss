@@ -2,39 +2,11 @@
   /* Kill Bootstrap's default box shadow */
   &, .navbar-inner, .navbar-fixed-top {
     @include box-shadow(none !important);
-
-    @media (min-width: 980px) {
-      .home & {background: transparent none !important;}
-    }
+    background: transparent none !important;
   }
 }
 
-.logo {
-  $width: 180px;
-  $height: 69px;
-  
-  & {
-    @extend .brand;
-
-    padding: 0 !important;
-    margin: 0 !important;
-    color: $white;
-  }
-
-  > a {
-    color: $white;
-    display: block;
-    width: $width;
-    height: $height;
-  
-    /* Image replacement */
-    text-indent: 100%;
-    white-space: nowrap;
-    overflow: hidden;
-  
-    @include retina('logo', $width, $height);
-  }
-}
+.brand {text-transform: uppercase;}
 
 /* Links */
 .nav-main {
@@ -42,7 +14,6 @@
   a {
     @include box-shadow(none !important);
     text-shadow: none !important;
-    font-size: 14px;
   }
 
   .nav > li > a {
@@ -54,12 +25,6 @@
     &, &:focus, &:hover {color: $linkColorHover;}
   }
 
-  /* When showing the responsive menu, all links should be white, since there likely won't be a hover option (touch) */
-  @media (max-width: 979px) {
-    & {padding-top: 15px;}
-    .nav > li {text-align: center;}
-    .nav > li a {color: $white;}
-  }
   @media (min-width: 980px) {
     & {float: right;}
   }
@@ -68,12 +33,12 @@
 /* Dropdowns */
 .caret {
   .navbar .nav li.dropdown > .dropdown-toggle & {
-    border-top-color: $white;
-    border-bottom-color: $white;
+    border-top-color: $grayDark;
+    border-bottom-color: $grayDark;
   }
   .navbar .nav li.dropdown > .dropdown-toggle:hover & {
-    border-top-color: $brandBlue;
-    border-bottom-color: $brandBlue;
+    border-top-color: $red;
+    border-bottom-color: $red;
   }
 }
 
@@ -82,7 +47,6 @@
   @include box-shadow(none !important);
 
   background: transparent none !important;
-  margin-top: 19px !important;
   padding: 0;
   border: 0;
 }
@@ -91,5 +55,5 @@
   @include box-shadow(none !important);
   width: 21px;
   height: 3px !important;
-  background: $white !important;
+  background: $black !important
 }

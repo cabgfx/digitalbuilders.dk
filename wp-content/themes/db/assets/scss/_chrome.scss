@@ -1,0 +1,15 @@
+html {border-top: 5px solid $black;}
+body {background: desaturate(lighten(#FFF7EB, 2%), 50%);}
+
+.site-footer {
+  padding: $baseLineHeight 0;
+  border-top: 1px solid $grayLight;
+  text-align: center;
+  background: $grayDark;
+  color: $grayLight;
+
+  @media (max-width: 979px) {
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+}

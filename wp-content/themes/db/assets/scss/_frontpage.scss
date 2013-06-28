@@ -1,9 +1,11 @@
 .title-header {
-  margin: $baseLineHeight*3 auto;
-  padding: $baseLineHeight 0;
+  margin: 0 auto $baseLineHeight*3;
+  padding: $baseLineHeight*2 0;
   text-align: center;
   border: solid $grayLighter;
   border-width: 1px 0;
+
+  @media (max-width: 979px) {margin: 0 auto $baseLineHeight;}
 
   h1 {
     max-width: 80%;
@@ -13,20 +15,18 @@
     line-height: 1.25em;
     letter-spacing: -.075em;
 
-    @media (max-width: 479px) {
-      font-size: 36px;
-    }
-    @media (max-width: 979px) {
-      max-width: none;
-    }
+    @media (max-width: 479px) {font-size: 36px;}
+    @media (max-width: 979px) {max-width: none;}
   }
 }
 
+/* People list wrapper */
 .panelists {
   max-width: 90%;
-  margin: 0 auto;
+  margin: 0 auto $baseLineHeight*2;
 }
 
+/* People list */
 .panelist {
   float: left;
   width: 16.666666667%;
@@ -42,7 +42,7 @@
 
   .panelist-image img {
     @extend .img-circle;
-    @include transition(background .2s);
+    @include transition(all .2s);
 
     display: block;
     margin: 0 auto;
@@ -52,31 +52,10 @@
     border: 1px solid $grayLight;
     background: $grayLighter;
   }
-  &:hover img {background: white;}
+  &:hover img {background: white; border-color: $orange;}
 }
 
-@media (max-width: 479px) {
-  .panelists {max-width: none;}
-  .panelist {
-    float: none;
-    width: 100%;
-    display: table;
-    margin: 0 0 $baseLineHeight/2;
-    padding: 0 0 $baseLineHeight/2;
-    text-align: left;
-    border-bottom: 1px solid $grayLighter;
-
-    > [class*="panelist"] {
-      display: table-cell;
-      vertical-align: middle;
-    }
-    
-    .panelist-image {width: 35%;}
-    .panelist-name {width: 65%;}
-    .panelist-image img {background: transparent; border: 0; padding: 0;}
-  }
-}
-
+/* Basic people components */
 .panelist-name {
   position: relative;
   display: block;
@@ -97,6 +76,33 @@
   }
 }
 
+/* People list - narrow viewports */
+@media (max-width: 559px) {
+  .panelists {max-width: none;}
+  .panelist {
+    float: none;
+    width: 100%;
+    display: table;
+    margin: 0 0 $baseLineHeight/2;
+    padding: 0 0 $baseLineHeight/2;
+    text-align: left;
+    border-bottom: 1px solid $grayLighter;
+
+    > [class*="panelist"] {
+      display: table-cell;
+      vertical-align: middle;
+    }
+    
+    .panelist-image {width: 35%;}
+    .panelist-name {width: 65%;}
+    .panelist-image img {background: transparent; border: 0; padding: 0;}
+  }
+}
+@media (min-width: 560px) and (max-width: 979px) {
+  .panelist {width: 25%;}
+}
+
+/* Popover info */
 .panelist-overlay {
   margin: 0 auto;
   max-width: 36em;
@@ -128,9 +134,6 @@
     p {margin: auto 1em;}
 
     /* Increase the tappable area */
-    .close {
-      top: -20px;      
-      padding: 20px;
-    }
+    .close {top: -20px; padding: 20px;}
   }
 }
