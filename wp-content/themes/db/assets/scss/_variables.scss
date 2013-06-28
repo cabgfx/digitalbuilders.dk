@@ -22,25 +22,17 @@ $linkColor: $brandBlue;
 
 /* Typography */
 
-$baseFontFamily: 'runda', 'Helvetica Neue', Helvetica, sans-serif;
-$displayFontFamily: 'lft-etica', $baseFontFamily;
+$baseFontFamily: 'Helvetica Neue', Helvetica, sans-serif;
+$displayFontFamily: 'leitura-news', Georgia, serif;
 
 /* Bootstrap navbar */
 $navbarCollapseWidth:             979px !default;
 $navbarCollapseDesktopWidth:      $navbarCollapseWidth + 1;
 
-$navbarHeight:                    40px;
-$navbarBackgroundHighlight:       rgba($darkBlue, .7);
-$navbarBackground:                rgba($black, .6);
+$navbarBackgroundHighlight:       $white;
+$navbarBackground:                $white;
 $navbarBorder:                    0;
-
-$navbarText:                      black;
-$navbarLinkColor:                 black;
-$navbarLinkColorHover:            white;
-$navbarLinkColorActive:           white;
 $navbarLinkBackgroundActive:      transparent;
-
-$navbarBrandColor:                black;
 
 /* Buttons */
 $paddingLarge: 14px 19px;

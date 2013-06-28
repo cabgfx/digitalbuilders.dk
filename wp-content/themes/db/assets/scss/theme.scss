@@ -2,9 +2,6 @@
 @import "mixins";
 
 @import "vendor/bootstrap/bootstrap";
-
-body {padding-top: $navbarHeight;}
-
 @import "vendor/bootstrap/responsive";
 
 @import "chrome";

@@ -8,6 +8,9 @@
   <title><?php wp_title('|', true, 'right'); ?></title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <script type="text/javascript" src="//use.typekit.net/txb7uqo.js"></script>
+  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+
   <?php wp_head(); ?>
 
   <link rel="alternate" type="application/rss+xml" title="<?php echo get_bloginfo('name'); ?> Feed" href="<?php echo home_url(); ?>/feed/">
