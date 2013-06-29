@@ -6006,16 +6006,17 @@ figure.alignnone {
     -moz-transition: all 0.2s;
     -o-transition: all 0.2s;
     transition: all 0.2s;
+    -webkit-box-shadow: 0 0 0 4px white, 0 0 0 5px #999999;
+    -moz-box-shadow: 0 0 0 4px white, 0 0 0 5px #999999;
+    box-shadow: 0 0 0 4px white, 0 0 0 5px #999999;
     display: block;
     margin: 0 auto;
     width: 70%;
-    box-sizing: border-box;
-    padding: 4px;
-    border: 1px solid #999999;
-    background: #e2e2e2; }
+    box-sizing: border-box; }
   .panelist:hover img {
-    background: white;
-    border-color: #ff9900; }
+    -webkit-box-shadow: 0 0 0 4px #ff9900, 0 0 0 5px #0a1317;
+    -moz-box-shadow: 0 0 0 4px #ff9900, 0 0 0 5px #0a1317;
+    box-shadow: 0 0 0 4px #ff9900, 0 0 0 5px #0a1317; }
 
 /* Basic people components */
 .panelist-name {
@@ -6078,16 +6079,20 @@ figure.alignnone {
     margin: .5em auto 1em;
     font-size: 20px; }
   .panelist-overlay .close {
-    opacity: 0.5;
-    filter: alpha(opacity=50);
+    opacity: 1;
+    filter: alpha(opacity=100);
+    -webkit-transition: color 0.2s;
+    -moz-transition: color 0.2s;
+    -o-transition: color 0.2s;
+    transition: color 0.2s;
     position: absolute;
     top: 0;
     right: 0;
-    font-size: 30px;
-    font-weight: bold; }
+    font-size: 40px;
+    font-weight: bold;
+    color: #ff9900; }
     .panelist-overlay .close:hover {
-      opacity: 1;
-      filter: alpha(opacity=100); }
+      color: #0a1317; }
   @media (max-width: 479px) {
     .panelist-overlay {
       /* Increase the tappable area */ }

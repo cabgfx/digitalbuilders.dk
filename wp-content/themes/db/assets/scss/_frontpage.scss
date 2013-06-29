@@ -51,16 +51,22 @@
   .panelist-image img {
     @extend .img-circle;
     @include transition(all .2s);
+    @include box-shadow(
+      0 0 0 4px $white,
+      0 0 0 5px $grayLight
+    );
 
     display: block;
     margin: 0 auto;
     width: 70%;
     box-sizing: border-box;
-    padding: 4px;
-    border: 1px solid $grayLight;
-    background: $grayLighter;
   }
-  &:hover img {background: white; border-color: $orange;}
+  &:hover img {
+    @include box-shadow(
+      0 0 0 4px $orange,
+      0 0 0 5px $black
+    );
+  }
 }
 
 /* Basic people components */
@@ -127,14 +133,17 @@
   .panelist-title {margin: .5em auto 1em; font-size: 20px; }
 
   .close {
-    @include opacity(50);
+    @include opacity(100);
+    @include transition(color .2s);
+    
     position: absolute;
     top: 0;
     right: 0;
-    font-size: 30px;
+    font-size: 40px;
     font-weight: bold;
+    color: $orange;
 
-    &:hover {@include opacity(100);}
+    &:hover {color: $black;}
   }
 
   @media (max-width: 479px) {
