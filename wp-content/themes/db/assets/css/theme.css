@@ -5898,6 +5898,8 @@ figure.alignnone {
     background: transparent none !important; }
   .navbar .brand {
     text-transform: uppercase; }
+    .navbar .brand:hover b {
+      color: #ff9900; }
     @media (max-width: 979px) {
       .navbar .brand {
         padding-left: 5px !important; } }
