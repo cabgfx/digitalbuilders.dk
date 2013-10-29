@@ -468,7 +468,7 @@ a:focus {
 p {
   margin: 0 0 10px; }
 
-.lead, .title-header p, .panelist-overlay p {
+.lead, .title-header-frontpage p, .panelist-overlay p {
   margin-bottom: 20px;
   font-size: 21px;
   font-weight: 200;
@@ -5851,15 +5851,44 @@ html, body {
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility; }
 
-h1, .page-header h1, h2, .page-header h2, h3, .page-header h3, h4, .page-header h4, h5, .page-header h5, h6, .page-header h6 {
-  font-family: "leitura-news", Georgia, serif;
-  font-weight: 1000; }
-
 figure {
   margin: 0; }
 
+.title-header {
+  margin: 0 auto 60px;
+  text-align: center; }
+  @media (max-width: 979px) {
+    .title-header {
+      margin: 0 auto 20px; } }
+.title-header h1 {
+  max-width: 80%;
+  margin: 0 auto;
+  font: normal 52px/1.25em "leitura-news", Georgia, serif;
+  letter-spacing: -0.075em; }
+  @media (max-width: 479px) {
+    .title-header h1 {
+      font-size: 36px; } }
+  @media (max-width: 979px) {
+    .title-header h1 {
+      max-width: none; } }
+
+.title-header-frontpage {
+  padding: 40px 0;
+  border: solid #e2e2e2;
+  border-width: 1px 0; }
+.title-header-frontpage p {
+  margin: 20px auto 0; }
+  @media (max-width: 479px) {
+    .title-header-frontpage p {
+      font-size: 16px !important; } }
+  @media (min-width: 980px) {
+    .title-header-frontpage p {
+      max-width: 70%; } }
+
+.title-header-single {
+  margin: 20px auto 40px; }
+
 .page-header-image {
-  max-height: 40%;
   overflow: hidden; }
   @media (max-width: 979px) {
     .page-header-image {
@@ -5875,10 +5904,14 @@ figure {
   margin: 0 auto; }
 
 .alignleft {
-  float: left; }
+  float: left;
+  margin-bottom: 5px;
+  margin-right: 20px; }
 
 .alignright {
-  float: right; }
+  float: right;
+  margin-bottom: 5px;
+  margin-left: 20px; }
 
 figure.alignnone {
   margin-left: 0;
@@ -5955,37 +5988,6 @@ figure.alignnone {
   width: 21px;
   height: 3px !important;
   background: #0a1317 !important; }
-
-.title-header {
-  margin: 0 auto 60px;
-  padding: 40px 0;
-  text-align: center;
-  border: solid #e2e2e2;
-  border-width: 1px 0; }
-  @media (max-width: 979px) {
-    .title-header {
-      margin: 0 auto 20px; } }
-  .title-header h1 {
-    max-width: 80%;
-    margin: 0 auto;
-    font-size: 52px;
-    font-weight: normal;
-    line-height: 1.25em;
-    letter-spacing: -0.075em; }
-    @media (max-width: 479px) {
-      .title-header h1 {
-        font-size: 36px; } }
-    @media (max-width: 979px) {
-      .title-header h1 {
-        max-width: none; } }
-  .title-header p {
-    margin: 20px auto 0; }
-    @media (max-width: 479px) {
-      .title-header p {
-        font-size: 16px !important; } }
-    @media (min-width: 980px) {
-      .title-header p {
-        max-width: 70%; } }
 
 /* People list wrapper */
 .panelists {
@@ -6109,6 +6111,9 @@ figure.alignnone {
 .hentry {
   margin-top: 40px; }
 
+.byline {
+  color: #999999; }
+
 .content .main {
   font-size: 16px;
   line-height: 1.6em;
@@ -6117,11 +6122,18 @@ figure.alignnone {
     to avoid styling .wp-smileys
   */
   /* WordPress images WITH captions */ }
+  .content .main blockquote {
+    padding-left: 0;
+    border-left: 0;
+    margin: 20px 0; }
   .content .main blockquote, .content .main blockquote p {
-    font-style: italic;
-    font-weight: 100;
-    line-height: 180%;
-    color: #999999; }
+    text-align: center;
+    font: italic normal 1.4em/1.25em "leitura-news", Georgia, serif;
+    color: #d33231; }
+  .content .main blockquote p {
+    margin-bottom: 0; }
+  .content .main blockquote p + p {
+    margin-top: 10px; }
   .content .main h2, .content .main h3, .content .main h4, .content .main h5, .content .main h6 {
     margin: 0 0 20px; }
   .content .main ul {
@@ -6129,12 +6141,6 @@ figure.alignnone {
   .content .main ul > li + li, .content .main ol > li + li {
     margin-top: .5em; }
   .content .main img[class*="wp-image"] {
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
-    border-radius: 3px;
-    -webkit-box-shadow: 0 10px 14px -10px rgba(10, 19, 23, 0.3);
-    -moz-box-shadow: 0 10px 14px -10px rgba(10, 19, 23, 0.3);
-    box-shadow: 0 10px 14px -10px rgba(10, 19, 23, 0.3);
     display: block;
     box-sizing: border-box;
     border: 1px solid #e2e2e2;
@@ -6145,18 +6151,15 @@ figure.alignnone {
     max-width: 100% !important;
     box-sizing: border-box; }
     .content .main .wp-caption img {
-      -webkit-border-radius: 0;
-      -moz-border-radius: 0;
-      border-radius: 0;
-      -webkit-box-shadow: none;
-      -moz-box-shadow: none;
-      box-shadow: none;
       border: 0;
       padding: 0; }
     .content .main .wp-caption figcaption {
       padding-bottom: 0;
       font-size: 13px;
       text-align: center; }
+
+#comments {
+  margin-top: 40px; }
 
 /* Image Widget */
 .widget_sp_image img {

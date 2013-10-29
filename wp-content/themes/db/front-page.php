@@ -4,7 +4,7 @@ $team = $wpdb->get_results("SELECT ID, display_name from $wpdb->users ORDER BY d
 ?>
 
 <?php while(have_posts()): the_post(); ?>
-  <header class="title-header">
+  <header class="title-header title-header-frontpage">
     <h1><?php the_title(); ?></h1>
     <?php the_content(); ?>
   </header>

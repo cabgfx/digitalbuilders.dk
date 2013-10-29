@@ -2,17 +2,21 @@
   margin-top: $baseLineHeight*2;
 }
 
+.byline {color: $grayLight;}
+
 .content .main {
   font-size: 16px;
   line-height: 1.6em;
 
   blockquote {
+    & {padding-left: 0; border-left: 0; margin: $baseLineHeight 0;}
     &, p {
-      font-style: italic;
-      font-weight: 100;
-      line-height: 180%;
-      color: $grayLight;
+      text-align: center;
+      font: italic normal 1.4em/1.25em $displayFontFamily;
+      color: $red;
     }
+    p {margin-bottom: 0;}
+    p + p {margin-top: $baseLineHeight/2;}
   }
   
   h2, h3, h4, h5, h6 {margin: 0 0 $baseLineHeight;}
@@ -27,9 +31,6 @@
     to avoid styling .wp-smileys
   */
   img[class*="wp-image"] {
-    @include border-radius($baseBorderRadius);
-    @include box-shadow(0 10px 14px -10px rgba($black, .3));
-    
     display: block;
     box-sizing: border-box;
     border: 1px solid $grayLighter;
@@ -44,8 +45,6 @@
     box-sizing: border-box;
 
     img {
-      @include border-radius(0);
-      @include box-shadow(none);
       border: 0; padding: 0;
     }
 
@@ -57,3 +56,5 @@
     }
   }
 }
+
+#comments {margin-top: $baseLineHeight*2;}
