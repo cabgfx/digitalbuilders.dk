@@ -55,14 +55,14 @@
           </p>
         <?php else : ?>
           <label for="author"><?php _e('Name', 'roots'); if ($req) _e(' (required)', 'roots'); ?></label>
-          <input type="text" class="text" name="author" id="author" value="<?php echo esc_attr($comment_author); ?>" size="22" <?php if ($req) echo 'aria-required="true"'; ?>>
+          <input type="text" class="text span8" name="author" id="author" value="<?php echo esc_attr($comment_author); ?>" size="22" <?php if ($req) echo 'aria-required="true"'; ?>>
           <label for="email"><?php _e('Email (will not be published)', 'roots'); if ($req) _e(' (required)', 'roots'); ?></label>
-          <input type="email" class="text" name="email" id="email" value="<?php echo esc_attr($comment_author_email); ?>" size="22" <?php if ($req) echo 'aria-required="true"'; ?>>
+          <input type="email" class="text span8" name="email" id="email" value="<?php echo esc_attr($comment_author_email); ?>" size="22" <?php if ($req) echo 'aria-required="true"'; ?>>
           <label for="url"><?php _e('Website', 'roots'); ?></label>
-          <input type="url" class="text" name="url" id="url" value="<?php echo esc_attr($comment_author_url); ?>" size="22">
+          <input type="url" class="text span8" name="url" id="url" value="<?php echo esc_attr($comment_author_url); ?>" size="22">
         <?php endif; ?>
         <label for="comment"><?php _e('Comment', 'roots'); ?></label>
-        <textarea name="comment" id="comment" class="input-xlarge" rows="5" aria-required="true"></textarea>
+        <textarea name="comment" id="comment" class="span8" rows="5" aria-required="true"></textarea>
         <p><input name="submit" class="btn btn-primary" type="submit" id="submit" value="<?php _e('Submit Comment', 'roots'); ?>"></p>
         <?php comment_id_fields(); ?>
         <?php do_action('comment_form', $post->ID); ?>

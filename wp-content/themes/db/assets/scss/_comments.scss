@@ -1,0 +1,23 @@
+#comments, #respond {margin-top: $baseLineHeight*2;}
+
+.comment {
+  .avatar {
+    @extend .img-circle;
+
+    float: left;  
+    margin-right: 10px;
+  }
+
+  .media-heading {margin-bottom: 0;}
+  time a {color: $grayLight;}
+  
+  p {margin: $baseLineHeight/2 0 0;}
+  p + p {margin-top: $baseLineHeight;}
+  
+  hr {margin-bottom: 5px;}
+}
+
+.media.comment {
+  & {margin-top: $baseLineHeight*2;}
+  & & {margin-top: $baseLineHeight;}
+}

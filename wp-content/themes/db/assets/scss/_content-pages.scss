@@ -1,12 +1,16 @@
 .hentry {
-  margin-top: $baseLineHeight*2;
+  & {
+    margin-top: $baseLineHeight*2;
+    color: $textColor;
+  }
 }
 
 .byline {color: $grayLight;}
 
 .content .main {
-  font-size: 16px;
-  line-height: 1.6em;
+  &, p {
+    font-size: 16px; line-height: 1.6em;
+  }
 
   blockquote {
     & {padding-left: 0; border-left: 0; margin: $baseLineHeight 0;}
@@ -17,13 +21,6 @@
     }
     p {margin-bottom: 0;}
     p + p {margin-top: $baseLineHeight/2;}
-  }
-  
-  h2, h3, h4, h5, h6 {margin: 0 0 $baseLineHeight;}
-
-  ul {list-style-type: square;}
-  ul, ol {
-   > li + li  {margin-top: .5em;}
   }
   
   /*
@@ -57,4 +54,12 @@
   }
 }
 
-#comments {margin-top: $baseLineHeight*2;}
+.entry-content {
+  h2, h3, h4, h5, h6 {margin: 0 0 $baseLineHeight;}
+  ul {list-style-type: square;}
+  ul, ol {
+   > li + li {margin-top: .5em;}
+  }
+}
+
+#respond > h3 {margin: 0;}

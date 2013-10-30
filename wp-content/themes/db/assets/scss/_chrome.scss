@@ -1,17 +1,30 @@
+@mixin darkbg-lighttext {
+  background: $grayDark;
+  color: $grayLight;
+}
+
 html {border-top: 5px solid $black;}
-body {background: desaturate(lighten(#FFF7EB, 2%), 50%);}
+body {@include darkbg-lighttext;}
+
+.site-wrap {background: desaturate(lighten(#FFF7EB, 2%), 70%);}
 
 html, body {height: 100%;}
 
 .site-footer {
+  @include darkbg-lighttext;
+
   padding: $baseLineHeight 0;
   border-top: 1px solid $grayLight;
   text-align: center;
-  background: $grayDark;
-  color: $grayLight;
 
   @media (max-width: 979px) {
     margin-left: -20px;
     margin-right: -20px;
   }
+}
+
+@media (max-width: 979px) {
+  /* Adjust default BS gutters, to account for faux footer background */
+  body {padding-left: 0; padding-right: 0;}
+  .site-wrap {padding-left: 20px; padding-right: 20px;}
 }
